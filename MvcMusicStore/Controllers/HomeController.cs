@@ -10,9 +10,7 @@ namespace MvcMusicStore.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "I like cake";
-
-            return View();
+            return new RedirectResult("~/StoreManager");
         }
 
         public ActionResult About()
@@ -28,5 +26,7 @@ namespace MvcMusicStore.Controllers
 
             return View();
         }
+
+
     }
 }

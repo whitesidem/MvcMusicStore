@@ -1,0 +1,36 @@
+﻿@model System.Linq.IQueryable<MvcMusicStore.Models.Album>
+
+@{
+    ViewBag.Title = "Search Results";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Your search for @ViewBag.searchPhrase returned the folowing results:</h2>
+
+<table>
+    <tr>
+        <th>
+            Artist
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            Price
+        </th>
+    </tr>
+    @foreach (var album in Model)
+    {
+        <tr>
+            <td>
+                @album.Artist.Name
+            </td>
+            <td>
+                @album.Title
+            </td>
+            <td>
+                @album.Price
+            </td>
+        </tr>
+    }
+</table>
